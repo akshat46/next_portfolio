@@ -9,17 +9,17 @@ const customTheme = {
     colors: {
         ...theme.colors,
         accent: {
-            200: "#05C7F2",
-            300: "#049DD9",
-            400: "#0477BF",
-            "text": "#ffffffbe"
+            200: "#CCD9D7",
+            300: "#7CA6A2",
+            400: "#43736E",
+            "text": "#3C3D40"
         },
         secondary:{
             300: "#F25C05",
         },
         primary: {
-            300: "#013440",
-            400: "#01222B"
+            300: "#F2F2F2",
+            400: "#F2F2F2"
         }
     },
 };

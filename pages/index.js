@@ -1,8 +1,9 @@
 import { ThemeProvider, Text, Heading, Box, Image } from "@chakra-ui/core";
 import customTheme from '../components/theme';
-import About from '../components/about';
+import Home from '../components/home';
 import Experiences from '../components/experiences';
-import Skills from '../components/skills';
+import About from '../components/about';
+import Projects from '../components/projects';
 
 const Index = () => (
   <ThemeProvider theme={customTheme}>
@@ -10,14 +11,15 @@ const Index = () => (
           body,html,:root { 
               padding: 0;
               margin: 0;
-              background: #01222B; 
+              background: #F2F2F2; 
               overflow-x: hidden;
           }
       `}
     </style>
-    <About/>
+    <Home />
+    <About />
     <Experiences/>
-    <Skills />
+    <Projects />
   </ThemeProvider>
 );
 
