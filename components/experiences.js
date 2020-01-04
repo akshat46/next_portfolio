@@ -2,16 +2,18 @@ import { ThemeProvider, Text, Heading, Box, Scale} from "@chakra-ui/core";
 import SectionHeading from './modules/heading-section';
 import customTheme from '../components/theme';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/core";
+import Fade from 'react-reveal/Fade';
 
 const Experiences = props => (
     <ThemeProvider theme={customTheme}>
         <SectionHeading>Work Experience</SectionHeading>
+        <Fade bottom duration={1500}>
         <Box w={["90%", "500px", "600px", "650px"]}
-        minHeight="200px"
+        minHeight="500px"
         boxSizing="border-box" p="md" m="0 auto" 
         marginTop={["12","24"]}
         marginBottom={["32","64"]} 
-        boxShadow="0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);"
+        boxShadow="0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15)"
         overflow="hidden"
         border="solid 1px rgba(0,0,0,0.01)"
         borderRadius="lg" p="0">
@@ -42,15 +44,14 @@ const Experiences = props => (
                         <Text fontSize="md" m="0" mb="2" color="accent.300" fontWeight="bold">at San Jose State University</Text>
                         <Text fontSize="md" m="0" mb="2" color="accent.300">Dec2018 - May2019</Text>
                         <Text marginTop="2" color="accent.text" lineHeight="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc non tortor nec ipsum ornare ultricies nec id purus. Praesent elementum ipsum ac condimentum auctor.
-                        Duis vestibulum nulla ac placerat bibendum. Mauris cursus ante libero, eu euismod ipsum tristique ut.
-                        Nunc gravida vitae ante et malesuada. Praesent elementum ipsum ac condimentum auctor.
+                        Nunc non tortor nec ipsum ornare ultricies nec id purus. Praesent elementntum auctor.
                         Duis vestibulum nulla ac placerat bibendum. Mauris cursus ante libero, eu euismod ipsum tristique ut.
                         Nunc gravida vitae ante et malesuada.</Text>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
         </Box>
+        </Fade>
     </ThemeProvider>
 );
 

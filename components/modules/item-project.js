@@ -1,5 +1,6 @@
-import { ThemeProvider, Text, Heading, Box, Flex, PseudoBox } from "@chakra-ui/core";
+import { ThemeProvider, Text, Box, Flex, } from "@chakra-ui/core";
 import customTheme from '../../components/theme';
+import Fade from 'react-reveal/Fade';
 
 const ItemProject = props => (
     <ThemeProvider theme={customTheme}>
@@ -16,6 +17,7 @@ const ItemProject = props => (
         lineHeight="2"
         borderRadius="lg"
         >
+            
             <Box
             boxSizing="border-box"
             w={["100%", "100%", "50%"]}
@@ -30,6 +32,7 @@ const ItemProject = props => (
             overflow="hidden"
             boxShadow={["0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15)", "0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15)","0px 0px 0px rgb(0,0,0,0)"]}
             m="0"/>
+            {/* </Fade> */}
             <Box
             boxSizing="border-box"
             w={["100%", "100%", "50%"]}
@@ -41,9 +44,12 @@ const ItemProject = props => (
                     bg={["none","primary.300"]}
                     ml={["0","0","-15%"]}
                     mt={["2", "8", "15%"]}
+                    overflow="hidden"
                     p={["2","4", "8"]}>
-                    <Text fontSize="xl" m="0" mb="2" color="accent.300" fontFamily="Playfair Display">{props.project.title}</Text>
-                    {props.project.description}
+                    <Fade bottom cascade><div>
+                        <Text fontSize="xl" m="0" mb="2" color="accent.300" fontFamily="Playfair Display" opacity="0">{props.project.title}</Text>
+                        <Text opacity="0">{props.project.description}</Text>
+                    </div></Fade>
                 </Box>
             </Box>
         </Flex>

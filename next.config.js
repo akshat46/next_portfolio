@@ -4,3 +4,12 @@ module.exports = withFonts({
     return config;
   }
 });
+
+module.exports = {
+  exportTrailingSlash: true,
+  exportPathMap: function () {
+    return {
+      '/': { page: '/' }
+    };
+  }
+};

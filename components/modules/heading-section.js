@@ -1,27 +1,27 @@
-import { ThemeProvider, Text, Heading, Box } from "@chakra-ui/core";
+import { ThemeProvider, Heading } from "@chakra-ui/core";
 import customTheme from '../../components/theme';
+import Fade from 'react-reveal/Fade';
 
-const heading = {
-    WebkitBackgroundClip: "text",
-    backgroundClip: "text",
-};
+// const heading = {
+//     WebkitBackgroundClip: "text",
+//     backgroundClip: "text",
+// };
 
 const SectionHeading = props => (
     <ThemeProvider theme={customTheme}>
         <Heading 
-            backgroundImage="url('/bg.jpg')"
-            backgroundPosition="center"
-            backgroundSize="cover"
-            overflow="hidden"
-            marginTop={["12", "-135px"]}
-            backgroundRepeat="no-repeat"
-            fontSize={["4xl", "6xl"]} 
+            // backgroundImage="url('/bg.jpg')"
+            // backgroundPosition="center"
+            // backgroundSize="cover"
+            // backgroundRepeat="no-repeat"
+            // color="transparent"
+            color="accent.300"
             textAlign="center" 
-            color="transparent"
+            overflow="hidden"
+            fontSize={["4xl", "6xl"]}
             fontWeight="normal"
-            // textShadow="0px -6px 10px rgba(255, 255, 255, 0.3), 0px 2px 2px rgba(0, 0, 0, 0.15)"
-            style={heading}>
-                {props.children}
+        >
+                <Fade bottom duration={1000}>{props.children}</Fade>
         </Heading>
     </ThemeProvider>
 );

@@ -1,4 +1,5 @@
 import { Text, Heading, Box, } from "@chakra-ui/core";
+import Fade from 'react-reveal/Fade';
 
 var text_overlay = {
         mixBlendMode: "color-dodge",
@@ -14,11 +15,13 @@ const Home = props => (
         marginBottom={["32", "64"]}
         w="100vw"
         h="100vh">
-        <Box zIndex="1" w={["80%", "400px", "630px", "760px"]} p="md" m="0 auto" filter="blur(10px)"
+        <Box zIndex="20" w={["80%", "400px", "630px", "760px"]} p="md" m="0 auto" filter="blur(10px)"
             pos="relative" top={["50%"]} transform={["translateY(-50%)"]} color="primary.300"
              display="border-box" borderRadius="10px">
-            <Text fontSize={["xl"]} textAlign="left" m="0" zIndex="10">Hello, I am</Text>
-            <Heading as="h1" fontSize={["3em", "5em", "6em"]} fontWeight="normal" m="0" textAlign="left" textShadow="0px -2px 6px rgba(255, 255, 255, 0.3), 0px 4px 15px rgba(0, 0, 0, 0.3)">Akshat Sharma.</Heading>
+            <Fade bottom cascade duration="1000"><div>
+                <Text fontSize={["xl"]} textAlign="left" m="0" zIndex="10" opacity="0">Hello, I am</Text>
+                <Heading as="h1" fontSize={["3em", "5em", "6em"]} fontWeight="normal" m="0" textAlign="left" opacity="0" textShadow="0px -2px 6px rgba(255, 255, 255, 0.3), 0px 4px 15px rgba(0, 0, 0, 0.3)">Akshat Sharma.</Heading>
+            </div></Fade>
         </Box>
 
         {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -27,7 +30,7 @@ const Home = props => (
         <Box
             pos="absolute"
             top="40px"
-            zIndex="0"
+            zIndex="10"
             m="0"
             w="100%"
             h="100%"
@@ -42,6 +45,7 @@ const Home = props => (
         <Box
             pos="absolute"
             top="0"
+            zIndex="18"
             m="0"
             w="100%"
             h="100%"
@@ -50,7 +54,7 @@ const Home = props => (
             backgroundPosition="center"
             backgroundSize="cover"
             backgroundRepeat="no-repeat"
-            boxShadow="0px 4px 12px rgba(0, 0, 0, 0.15)"/>
+            boxShadow="0px 4px 12px rgba(0, 0, 0, 0.15)" />
     </Box>
 );
 

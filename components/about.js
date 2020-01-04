@@ -1,6 +1,6 @@
 import { ThemeProvider, Text, Heading, Box, Flex } from "@chakra-ui/core";
 import SectionHeading from './modules/heading-section';
-import SkillsList from './modules/list-skills';
+import Fade from 'react-reveal/Fade';
 import customTheme from './theme';
 import { DiJavascript1, DiSass, DiNodejsSmall, DiReact, DiFirebase, DiAws, DiGoogleCloudPlatform, DiGit, DiLinux } from 'react-icons/di';
 import { AiFillCopyrightCircle } from 'react-icons/ai';
@@ -30,10 +30,13 @@ const About = props => (
             marginTop={["12","24"]}
             marginBottom={["32", "64"]}
             textAlign="center">
-            <Text color="accent.text" lineHeight="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra feugiat iaculis. 
-            Nullam tristique, massa ac condimentum malesuada, quam neque dapibus velit, euismod imperdiet libero velit eget nisi. 
-            Phasellus pulvinar urna ac sapien tempor, accumsan rutrum orci facilisis. Etiam id diam ultrices libero lacinia porttitor.</Text>
-            <Text color="accent.text" marginTop={["6", "12"]}>Few technologies I have been working with recently.</Text>
+            <Fade bottom cascade><div>
+                <Text color="accent.text" lineHeight="2" opacity="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra feugiat iaculis. 
+                Nullam tristique, massa ac condimentum malesuada, quam neque dapibus velit, euismod imperdiet libero velit eget nisi. 
+                Phasellus pulvinar urna ac sapien tempor, accumsan rutrum orci facilisis. Etiam id diam ultrices libero lacinia porttitor.</Text>
+                <Text color="accent.text" marginTop={["6", "12"]} opacity="0">Few technologies I have been working with recently.</Text>
+            </div></Fade>
+            <Fade bottom cascade>
             <Flex w="100%" h={["200px", "100px"]}
             direction="column"
             alignContent="space-around"
@@ -43,6 +46,7 @@ const About = props => (
             fontFamily="Karla"
             flexWrap="wrap"
             pos="relative"
+            opacity="0"
             ml="auto" mr="auto">
                 <Box m={["1", "2"]}><AiFillCopyrightCircle /> C Language</Box>
                 <Box m={["1", "2"]}><DiJavascript1 /> JavaScript</Box>
@@ -54,7 +58,7 @@ const About = props => (
                 <Box m={["1", "2"]}><DiLinux/> Linux</Box>
                 <Box m={["1", "2"]} w={["45%", "auto"]}><DiGoogleCloudPlatform /> Google Cloud Platform</Box>
                 <Box m={["1", "2"]} w={["45%", "auto"]}><DiAws /> Amazon Web Services IoT</Box>
-            </Flex>
+            </Flex></Fade>
         </Box>
         {/* <Box w={["80%", "500px", "600px", "650px"]}
             boxSizing="border-box" p="md" m="0 auto"
