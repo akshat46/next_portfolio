@@ -48,6 +48,8 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           />
+          <link href="/loader.css" rel="stylesheel" />
+          <link href="https://fonts.googleapis.com/css?family=Karla|Playfair+Display:700&display=swap" rel="stylesheet"/>
         </Head>
         <body>
           <GlobalStyle />

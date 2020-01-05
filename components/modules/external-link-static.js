@@ -25,6 +25,7 @@ const ExternalLink = props => (
             boxShadow="0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15)"
             borderRadius="50%"
             opacity="1"
+            color="accent.300"
             transition="all 0.3s ease-in-out"
             _hover={Reset}>
                 {props.icon}

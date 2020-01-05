@@ -2,8 +2,6 @@ import { ThemeProvider, Text, Box, Flex, Button } from "@chakra-ui/core";
 import customTheme from '../components/theme';
 import ExternalLink from './modules/external-link';
 import ExternalLinkStatic from './modules/external-link-static';
-import Fade from 'react-reveal/Fade';
-import { FaGithub, FaLinkedinIn, FaCodepen, FaGitlab } from 'react-icons/fa';
 import { FiGithub, FiGitlab, FiCodepen, FiLinkedin } from "react-icons/fi";
 
 const Links = props => (
@@ -19,10 +17,10 @@ const Links = props => (
             color="accent.text"
             zIndex={["-1","-1","50"]}
         >
-            <ExternalLink url="https://github.com/akshat46" icon={[<FiGithub />]} delay="600"/>
-            <ExternalLink url="https://gitlab.com/akshat46" icon={[<FiGitlab />]} delay="800"/>
-            <ExternalLink url="https://codepen.io/akshat46" icon={[<FiCodepen />]} delay="1000"/>
-            <ExternalLink url="https://www.linkedin.com/in/akshat46/" icon={[<FiLinkedin />]} delay="1200"/>
+            <ExternalLink url="https://github.com/akshat46" icon={[<FiGithub />]} delay="3100"/>
+            <ExternalLink url="https://gitlab.com/akshat46" icon={[<FiGitlab />]} delay="3700"/>
+            <ExternalLink url="https://codepen.io/akshat46" icon={[<FiCodepen />]} delay="4000"/>
+            <ExternalLink url="https://www.linkedin.com/in/akshat46/" icon={[<FiLinkedin />]} delay="4150"/>
         </Box>
 
         <Box

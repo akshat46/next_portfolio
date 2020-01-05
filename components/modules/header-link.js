@@ -10,7 +10,7 @@ const HeaderLink = props => (
         <Link activeClass="active" to={props.target}
             spy={false} smooth={true} offset={props.offset}
             duration={1500} delay={100} >
-        <Fade top cascade delay={props.delay} duration="600">
+        <Fade right cascade delay={props.delay} duration="600">
         <Button variant="outline" 
             size="sm"
             fontSize="2xl"
@@ -21,6 +21,7 @@ const HeaderLink = props => (
             boxSizing="border-box"
             mb="6"
             borderRadius="50px"
+            color="accent.300"
             bg="primary.300"
             top="0"
             transition="all 0.3s ease-in-out"

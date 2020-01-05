@@ -9,9 +9,9 @@ const customTheme = {
     colors: {
         ...theme.colors,
         accent: {
-            200: "#CCD9D7",
-            300: "#7CA6A2",
-            400: "#43736E",
+            200: "#A66D82",
+            300: "#A6375F",
+            400: "#732743",
             "text": "#3C3D40"
         },
         secondary:{

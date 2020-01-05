@@ -14,10 +14,12 @@
     "@chakra-ui/core": "^0.5.2",
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
+    "@inlet/react-pixi": "^1.1.11",
     "@merc/react-timeline": "^0.1.42",
     "emotion-theming": "^10.0.27",
     "next": "^9.1.6",
     "next-fonts": "^0.17.0",
+    "pixi.js": "^5.2.0",
     "react": "^16.8.5",
     "react-animated-burgers": "^1.2.7",
     "react-dom": "^16.8.5",
@@ -25,6 +27,7 @@
     "react-icons": "^3.8.0",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.7.15",
+    "react-spinners-kit": "^1.9.1",
     "styled-components": "^4.4.1",
     "typeface-playfair-display": "0.0.72"
   }

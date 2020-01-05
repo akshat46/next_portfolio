@@ -25,6 +25,7 @@ class Header extends React.Component{
     render(){
         return (
         <ThemeProvider theme={customTheme}>
+                <Fade top cascade delay="2500" duration="1000">
                 <Box
                 pos="fixed"
                 w="50px"
@@ -35,18 +36,19 @@ class Header extends React.Component{
                 boxSizing="border-box"
                 bg="primary.300"
                 borderRadius="50px"
-                boxShadow="-4px -6px 6px rgba(255, 255, 255, 0.7), 10px 4px 20px rgba(0, 0, 0, 0.15)"
+                boxShadow="-4px -6px 6px rgba(255, 255, 255, 0.6), 10px 4px 20px rgba(0, 0, 0, 0.15)"
                 color="accent.text"
                 pt="2"
                 overflow="hidden"
                 // visibility={["hidden", "hidden", "visibile"]}
-                zIndex={["-1", "-1", "-1", "5"]}
+                zIndex={["-1", "-1", "-1", "20"]}
             >
-                <HeaderLink icon={[<FiHome />]} target="home" offset={-100} delay="600"/>
-                <HeaderLink icon={[<FiInfo />]} target="about" offset={-100} delay="800"/>
-                <HeaderLink icon={[<FiBriefcase />]} target="experiences" offset={-100} delay="1000"/>
-                <HeaderLink icon={[<FiActivity />]} target="projects" offset={-100} delay="1200"/>
+                <HeaderLink icon={[<FiHome />]} target="home" offset={-100} delay="2400"/>
+                <HeaderLink icon={[<FiInfo />]} target="about" offset={-100} delay="2800"/>
+                <HeaderLink icon={[<FiBriefcase />]} target="experiences" offset={-100} delay="3000"/>
+                <HeaderLink icon={[<FiActivity />]} target="projects" offset={-100} delay="3100"/>
             </Box>
+            </Fade>
 
             <Fade top cascade delay="100" duration="600">
             <Box
