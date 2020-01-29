@@ -25,13 +25,13 @@ class Index extends React.Component{
   render(){
     const { loading } = this.state;
 
-    if (loading) { // if your component doesn't have to wait for an async action, remove this block 
-      return (
-        <Box d="block" pos="absolute" left="50%" top="50%" transform="translate(-50%)">
-          <MagicSpinner size={40} color="#A6375F" loading={loading} />
-        </Box>
-      );
-    }
+    // if (loading) { // if your component doesn't have to wait for an async action, remove this block 
+    //   return (
+    //     <Box d="block" pos="absolute" left="50%" top="50%" transform="translate(-50%)">
+    //       <MagicSpinner size={40} color="#A6375F" loading={loading} />
+    //     </Box>
+    //   );
+    // }
 
     return (
       <ThemeProvider theme={customTheme}>
@@ -56,7 +56,7 @@ class Index extends React.Component{
 }
 
 function demoAsyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  return new Promise((resolve) => setTimeout(() => resolve(), 100));
 }
 
 // background color

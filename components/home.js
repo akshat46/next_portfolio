@@ -1,5 +1,6 @@
-import { Text, Heading, Box, } from "@chakra-ui/core";
+import { Text, Heading, Box, Button } from "@chakra-ui/core";
 import Fade from 'react-reveal/Fade';
+import Resume from './modules/resume';
 
 var text_overlay = {
         mixBlendMode: "color-dodge",
@@ -9,8 +10,16 @@ var blur = {
     filter: 'blur(40px)',
 }
 
+const Reset = {
+    bg: "none",
+    top: "-4px",
+    opacity: "1",
+    // color: "#7CA6A2"
+}
+
 class Home extends React.Component{
     opacity="0.7"
+    
     render(){
         return (
         <Box
@@ -25,6 +34,7 @@ class Home extends React.Component{
                     <Text fontSize={["xl"]} textAlign="left" m="0" zIndex="10" opacity="0">Hello, I am</Text>
                     <Heading as="h1" fontSize={["3em", "5em", "6em"]} fontWeight="normal" m="0" textAlign="left" opacity="0" textShadow="0px -2px 6px rgba(255, 255, 255, 0.3), 0px 4px 15px rgba(0, 0, 0, 0.3)">Akshat Sharma.</Heading>
                 </div></Fade>
+                <Resume/>
             </Box>
 
             {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

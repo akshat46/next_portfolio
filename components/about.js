@@ -31,9 +31,9 @@ const About = props => (
             marginBottom={["32", "64"]}
             textAlign="center">
             <Fade bottom cascade><div>
-                <Text color="accent.text" lineHeight="2" opacity="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra feugiat iaculis. 
-                Nullam tristique, massa ac condimentum malesuada, quam neque dapibus velit, euismod imperdiet libero velit eget nisi. 
-                Phasellus pulvinar urna ac sapien tempor, accumsan rutrum orci facilisis. Etiam id diam ultrices libero lacinia porttitor.</Text>
+                <Text color="accent.text" lineHeight="2" opacity="0">I recieved a Bachelors in software engineering from San Jose State University in 2015, 
+                and I am currently pursuring masters in Software Engineering at SJSU(graduating May2020). I am passionate about software development, and 
+                I am specially enjoying full stack web development as a Research Assistant in SJSU these days. </Text>
                 <Text color="accent.text" marginTop={["6", "12"]} opacity="0">Few technologies I have been working with recently.</Text>
             </div></Fade>
             <Fade bottom cascade>

@@ -1,4 +1,4 @@
-import { ThemeProvider, Text, Heading, Box, Scale} from "@chakra-ui/core";
+import { ThemeProvider, Text, List, ListItem, ListIcon, Box} from "@chakra-ui/core";
 import SectionHeading from './modules/heading-section';
 import customTheme from '../components/theme';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/core";
@@ -9,7 +9,7 @@ const Experiences = props => (
         <SectionHeading>Work Experience</SectionHeading>
         <Fade bottom duration={1500}>
         <Box w={["90%", "500px", "600px", "650px"]}
-        minHeight="500px"
+        minHeight="560px"
         boxSizing="border-box" p="md" m="0 auto" 
         marginTop={["12","24"]}
         marginBottom={["32","64"]} 
@@ -31,22 +31,29 @@ const Experiences = props => (
                     <TabPanel bg="primary.300" p={["6","12"]} boxSizing="border-box" >
                         <Text fontSize="xl" m="0" mb="4" color="accent.300" fontFamily="Playfair Display">Research Assistant</Text>
                         <Text fontSize="md" m="0" mb="2" color="accent.300" fontWeight="bold">at San Jose State University</Text>
-                        <Text fontSize="md" m="0" mb="2" color="accent.300">Nov2019 - Present</Text>
-                        <Text marginTop="2" color="accent.text" lineHeight="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Nunc non tortor nec ipsum ornare ultricies nec id purus. Praesent elementum ipsum ac condimentum auctor. 
-                        Duis vestibulum nulla ac placerat bibendum. Mauris cursus ante libero, eu euismod ipsum tristique ut. 
-                        Nunc gravida vitae ante et malesuada. Praesent elementum ipsum ac condimentum auctor. 
-                        Duis vestibulum nulla ac placerat bibendum. Mauris cursus ante libero, eu euismod ipsum tristique ut. 
-                        Nunc gravida vitae ante et malesuada.</Text>
+                        <Text fontSize="md" m="0" mb="2" color="accent.300">Oct2019 - Present</Text>
+                            <List m="0" p="0" color="accent.text" lineHeight="2">
+                                <ListItem><ListIcon icon="chevron-right" color="accent.300"/>Implemented a Node.js service that gathers live data from IoT devices 
+                        using AWS IoT and GCP Pub/Sub, and pushes it to Firebase database.</ListItem>
+                                <ListItem><ListIcon icon="chevron-right" color="accent.300"/>Hosted the IoT Node.js service , and a dashboard web app on GCP Compute Engine.</ListItem>
+                                <ListItem><ListIcon icon="chevron-right" color="accent.300"/>Currently implementing a map based dashboard using Next.js and React that will display live values from Firebase. 
+                        Using socket.io to implement client-server notification system</ListItem>
+                            </List>
                     </TabPanel>
                     <TabPanel bg="primary.300" p={["6","12"]} boxSizing="border-box">
                         <Text fontSize="xl" m="0" mb="4" color="accent.300" fontFamily="Playfair Display">Research Assistant</Text>
                         <Text fontSize="md" m="0" mb="2" color="accent.300" fontWeight="bold">at San Jose State University</Text>
                         <Text fontSize="md" m="0" mb="2" color="accent.300">Dec2018 - May2019</Text>
-                        <Text marginTop="2" color="accent.text" lineHeight="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc non tortor nec ipsum ornare ultricies nec id purus. Praesent elementntum auctor.
-                        Duis vestibulum nulla ac placerat bibendum. Mauris cursus ante libero, eu euismod ipsum tristique ut.
-                        Nunc gravida vitae ante et malesuada.</Text>
+                            <List m="0" p="0" color="accent.text" lineHeight="2">
+                                <ListItem><ListIcon icon="chevron-right" color="accent.300"/>Developed a web dashboard with Node.js and Express.js for backend, Firebase as database, jQuery and SASS 
+                                        for frontend implementation. Main achievments:
+                                    <List color="accent.text" lineHeight="2">
+                                        <ListItem><ListIcon icon="chevron-right" color="accent.300"/>Visualized live locations of different entities on a map based on values in Firebase using constant AJAX calls to Node.js REST API, and Google MAPS API.</ListItem>
+                                        <ListItem><ListIcon icon="chevron-right" color="accent.300"/>Implemented a Node.js service that generates random coordinates, and other values for certain entities and saves them in Firebase.</ListItem>
+                                    </List>
+                                </ListItem>
+                                <ListItem><ListIcon icon="chevron-right" color="accent.300"/>Enhanced existing Android app UI. Worked with Java and XML.</ListItem>
+                            </List>
                     </TabPanel>
                 </TabPanels>
             </Tabs>
