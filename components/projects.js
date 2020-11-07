@@ -47,7 +47,7 @@ const Projects = props => (
             position="relative"
             margin=" 0 auto"
             marginTop={["12", "24"]}
-            marginBottom={["32", "64"]}
+            marginBottom={["16", "32"]}
             direction="column"
             alignContent="space-around"
             marginTop={["2", "4"]}

@@ -9,20 +9,14 @@ import Fade from 'react-reveal/Fade';
 
 const SectionHeading = props => (
     <ThemeProvider theme={customTheme}>
-        <Heading 
-            // backgroundImage="url('/bg.jpg')"
-            // backgroundPosition="center"
-            // backgroundSize="cover"
-            // backgroundRepeat="no-repeat"
-            // color="transparent"
+        <Fade bottom duration={1000}><Heading
             color="accent.300"
             textAlign="center" 
-            overflow="hidden"
             fontSize={["4xl", "6xl"]}
             fontWeight="normal"
         >
-                <Fade bottom duration={1000}>{props.children}</Fade>
-        </Heading>
+                {props.children}
+        </Heading></Fade>
     </ThemeProvider>
 );
 

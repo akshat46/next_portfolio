@@ -4,10 +4,8 @@ import { FaGithub } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 
 const Reset = {
-    bg: "none",
     top: "-4px",
     opacity: "1",
-    // color: "#7CA6A2"
 }
 
 const ExternalLink = props => (
@@ -25,8 +23,7 @@ const ExternalLink = props => (
             color="accent.300"
             mb="6"
             bg="primary.300"
-            // boxShadow="0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15)"
-            boxShadow="4px -6px 6px rgba(255, 255, 255, 0.6), -10px 4px 20px rgba(0, 0, 0, 0.15)"
+            boxShadow={customTheme.shadows.left}
             borderRadius="50%"
             opacity="0"
             transition="all 0.3s ease-in-out"

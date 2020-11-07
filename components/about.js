@@ -2,8 +2,8 @@ import { ThemeProvider, Text, Heading, Box, Flex } from "@chakra-ui/core";
 import SectionHeading from './modules/heading-section';
 import Fade from 'react-reveal/Fade';
 import customTheme from './theme';
-import { DiJavascript1, DiSass, DiNodejsSmall, DiReact, DiFirebase, DiAws, DiGoogleCloudPlatform, DiGit, DiLinux } from 'react-icons/di';
-import { AiFillCopyrightCircle } from 'react-icons/ai';
+import { DiJavascript1, DiSass, DiNodejsSmall, DiReact, DiFirebase, DiAws, DiGoogleCloudPlatform, DiGit, DiLinux, DiAndroid } from 'react-icons/di';
+import { AiFillCopyrightCircle, AiOutlineAndroid } from 'react-icons/ai';
 import { GiMoonOrbit } from 'react-icons/gi';
 
 const languages = {
@@ -28,13 +28,13 @@ const About = props => (
         <Box w={["90%", "500px", "600px", "650px"]}
             boxSizing="border-box" p="md" m="0 auto"
             marginTop={["12","24"]}
-            marginBottom={["32", "64"]}
+            marginBottom={["16", "32"]}
             textAlign="center">
             <Fade bottom cascade><div>
-                <Text color="accent.text" lineHeight="2" opacity="0">I recieved a Bachelors in software engineering from San Jose State University in 2015, 
-                and I am currently pursuring masters in Software Engineering at SJSU(graduating May2020). I am passionate about software development, and 
-                I am specially enjoying full stack web development as a Research Assistant in SJSU these days. </Text>
-                <Text color="accent.text" marginTop={["6", "12"]} opacity="0">Few technologies I have been working with recently.</Text>
+                <Text color="accent.text" lineHeight="2" opacity="0" fontFamily="karla">I recieved a bachelor's degree in software engineering from San Jose State University in 2018, 
+                and I am currently pursuring a master's degree in Software Engineering at SJSU(graduating <Text as="mark" backgroundColor="tertiary.400">December 2020</Text>). I am passionate about software development, and 
+                specially interested in Full Stack Web Development.</Text>
+                <Text color="accent.text" marginTop={["6", "12"]} opacity="0">Few technologies I have been working a lot with recently.</Text>
             </div></Fade>
             <Fade bottom cascade>
             <Flex w="100%" h={["200px", "100px"]}
@@ -48,21 +48,21 @@ const About = props => (
             pos="relative"
             opacity="0"
             ml="auto" mr="auto">
-                <Box m={["1", "2"]}><AiFillCopyrightCircle /> C Language</Box>
+                <Box m={["1", "2"]}><AiOutlineAndroid/> Android</Box>
                 <Box m={["1", "2"]}><DiJavascript1 /> JavaScript</Box>
-                <Box m={["1", "2"]}><DiSass /> SCSS</Box>
                 <Box m={["1", "2"]}><DiNodejsSmall/> Node.js</Box>
-                <Box m={["1", "2"]}><DiNodejsSmall /> Express.js</Box>
-                <Box m={["1", "2"]}><DiReact/> React (Next.js)</Box>
-                <Box m={["1", "2"]}><DiFirebase /> Firebase</Box>
+                <Box m={["1", "2"]}><DiReact/> React</Box>
+                <Box m={["1", "2"]}><DiSass /> SCSS</Box>
                 <Box m={["1", "2"]}><DiLinux/> Linux</Box>
+                <Box m={["1", "2"]}><DiGit/> Git</Box>
+                <Box m={["1", "2"]}><DiFirebase /> Firebase</Box>
                 <Box m={["1", "2"]} w={["45%", "auto"]}><DiGoogleCloudPlatform /> Google Cloud Platform</Box>
                 <Box m={["1", "2"]} w={["45%", "auto"]}><DiAws /> Amazon Web Services IoT</Box>
             </Flex></Fade>
         </Box>
         {/* <Box w={["80%", "500px", "600px", "650px"]}
             boxSizing="border-box" p="md" m="0 auto"
-            marginBottom={["32", "64"]}
+            marginBottom={["16", "32"]}
             textAlign="center">
             <Text color="accent.text">Other technologies I am familiar with.</Text>
             <Flex w="100%"

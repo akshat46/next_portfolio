@@ -2,7 +2,7 @@ import { ThemeProvider, Text, Box, Flex, Button } from "@chakra-ui/core";
 import customTheme from '../components/theme';
 import ExternalLink from './modules/external-link';
 import ExternalLinkStatic from './modules/external-link-static';
-import { FiGithub, FiGitlab, FiCodepen, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiGitlab, FiCodepen, FiLinkedin, FiFileText } from "react-icons/fi";
 
 const Links = props => (
     <ThemeProvider theme={customTheme}>
@@ -17,6 +17,7 @@ const Links = props => (
             color="accent.text"
             zIndex={["-1","-1","50"]}
         >
+            <ExternalLink url="/Akshat_Sharma_Resume.pdf" icon={[<FiFileText/>]} delay="2200"/>
             <ExternalLink url="https://github.com/akshat46" icon={[<FiGithub />]} delay="3100"/>
             <ExternalLink url="https://gitlab.com/akshat46" icon={[<FiGitlab />]} delay="3700"/>
             <ExternalLink url="https://codepen.io/akshat46" icon={[<FiCodepen />]} delay="4000"/>

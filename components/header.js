@@ -36,7 +36,7 @@ class Header extends React.Component{
                 boxSizing="border-box"
                 bg="primary.300"
                 borderRadius="50px"
-                boxShadow="-4px -6px 6px rgba(255, 255, 255, 0.6), 10px 4px 20px rgba(0, 0, 0, 0.15)"
+                boxShadow={customTheme.shadows.right}
                 color="accent.text"
                 pt="2"
                 overflow="hidden"

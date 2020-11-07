@@ -1,4 +1,4 @@
-import { ThemeProvider, Box } from "@chakra-ui/core";
+import { ThemeProvider, ColorModeProvider, } from "@chakra-ui/core";
 import customTheme from "../components/theme";
 import Home from "../components/home";
 import Experiences from "../components/experiences";
@@ -7,6 +7,7 @@ import Projects from "../components/projects";
 import Links from "../components/links";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import dynamic from 'next/dynamic'
 import React from "react";
 import * as Scroll from "react-scroll";
 import { MagicSpinner } from "react-spinners-kit";
@@ -43,14 +44,15 @@ class Index extends React.Component {
                         :root {
                             padding: 0;
                             margin: 0;
-                            background: #f2f2f2;
+                            background: ${customTheme.colors.primary["300"]};
+                            font-family: karla, sans-serif;
                             overflow-x: hidden;
                         }
                     `}
                 </style>
                 <Header />
                 <Element name="home">
-                    <Home />
+                    <Home/>
                 </Element>
                 <Element name="about">
                     <About />
