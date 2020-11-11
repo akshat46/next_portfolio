@@ -43,7 +43,7 @@ class Home extends React.Component {
                         top="10%" left="9%"
                         m="0"
                         w="82%"
-                        h="82%"
+                        h="82vh"
                         borderRadius="lg"
                         backgroundImage={customTheme.background}
                         backgroundColor="blue"
@@ -59,7 +59,7 @@ class Home extends React.Component {
                         zIndex="2"
                         m="0"
                         w="80%"
-                        h="80%"
+                        h="80vh"
                         borderRadius="lg"
                         backgroundImage={customTheme.background}
                         backgroundColor="blue"

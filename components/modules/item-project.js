@@ -1,5 +1,7 @@
-import { ThemeProvider, Text, Box, Flex, Button, Tooltip, Icon, 
-    Modal, ModalOverlay, ModalContent, useDisclosure, ModalBody} from "@chakra-ui/core";
+import {
+    ThemeProvider, Text, Box, Flex, Button, Tooltip, Icon, Image,
+    Modal, ModalOverlay, ModalContent, useDisclosure, ModalBody, Heading
+} from "@chakra-ui/core";
 import customTheme from '../../components/theme';
 import Fade from 'react-reveal/Fade';
 import { FiGithub, FiLock } from "react-icons/fi";
@@ -8,8 +10,18 @@ import { Component } from "react";
 const Reset = {
     bg: "none",
     top: "-4px",
-    // color: "#7CA6A2"
 }
+
+
+// w="80%"
+// h="80%"
+// backgroundImage={props.project.image}
+// backgroundPosition="center"
+// backgroundSize="cover"
+// backgroundRepeat="no-repeat"
+// borderRadius="lg"
+// boxShadow="0px 4px 23px rgba(0, 0, 0, 0.15)"
+// m="0"
 
 const ItemProject = props => {
     // const [open, setOpen] = React.useState(false)
@@ -33,8 +45,9 @@ const ItemProject = props => {
                     boxSizing="border-box"
                     w={["100%", "100%", "50%"]}
                     h="300px"
-                    backgroundImage={props.project.image}
+                    backgroundImage={`url('${props.project.image}')`}
                     onClick={onOpen}
+                    cursor="pointer"
                     backgroundColor="blue"
                     backgroundPosition="center"
                     backgroundSize="cover"
@@ -45,18 +58,18 @@ const ItemProject = props => {
                         "0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15)",
                         "0px 0px 0px rgb(0,0,0,0)"]}
                     m="0" />
-                <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose} isCentered>
+                <Modal isOpen={isOpen} onClose={onClose} isCentered>
                     <ModalOverlay />
-                        <ModalContent 
-                        w="80%"
-                        h="80%"
-                        backgroundImage={props.project.image}
-                        backgroundPosition="center"
-                        backgroundSize="cover"
-                        backgroundRepeat="no-repeat"
-                        borderRadius="lg"
-                        boxShadow="0px 4px 23px rgba(0, 0, 0, 0.15)"
-                        m="0" />
+                    <ModalContent p="0" maxW="80%" bg="transparent" boxShadow="0">
+                        <ModalBody p="0" mb="0" bg="transparent" >
+                            <Image
+                            width="100%"
+                            objectFit="cover"
+                            src={props.project.image}
+                            boxShadow="0px 4px 34px rgba(0, 0, 0, 0.40)"
+                            borderRadius="lg"
+                            m="0" /></ModalBody>
+                    </ModalContent>
                 </Modal>
                 {/* </Fade> */}
                 <Box
