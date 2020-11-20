@@ -14,8 +14,8 @@ const Reset = {
 
 function Footer() {
     return (
-        <ThemeProvider theme={customTheme}>
-            <Box w="100%" h={["200px", "200px", "100px"]} bg="primary.300" pt="4" m="0" textAlign="center">
+        <div>
+            <Box w="100%" h={["150px", "150px", "50px"]} bg="primary.300" pt="4" m="0" textAlign="center">
                 <Box
                     m="0 auto"
                     w="100%"
@@ -24,58 +24,53 @@ function Footer() {
                     color="accent.text"
                     display={["block", "block", "none"]}
                     mb="8"
-                    zIndex="50"
-                >
+                    zIndex="50">
                     <ExternalLinkStatic url="https://github.com/akshat46" icon={[<FiGithub />]} />
                     <ExternalLinkStatic url="https://gitlab.com/akshat46" icon={[<FiGitlab />]} />
                     <ExternalLinkStatic url="https://codepen.io/akshat46" icon={[<FiCodepen />]} />
                     <ExternalLinkStatic url="https://www.linkedin.com/in/akshat46/" icon={[<FiLinkedin />]} />
                 </Box>
-                <Text color="accent.text">
+                <Text color="accent.text" fontSize="xs">
                     Built with{" "}
                     <Link
                         as="a"
                         textTransform="none"
-                        fontWeight="bold"
+                        fontFamily="Playfair Display"
                         color="#0070f3"
                         opacity="1"
                         target="_blank"
                         href="https://nextjs.org/"
-                        isExternal
-                    >
-                        <FiEdit2 /> Next.js
+                        isExternal>
+                        Next.js
                     </Link>{" "}
-                    and
+                    and{" "}
                     <Link
                         as="a"
                         textTransform="none"
-                        fontWeight="bold"
+                        fontFamily="Playfair Display"
                         color="teal.400"
                         opacity="1"
                         target="_blank"
                         href="https://chakra-ui.com/"
-                        isExternal
-                    >
-                        <GiPaintRoller /> Chakra UI
+                        isExternal>
+                        Chakra UI
                     </Link>
                     .
                 </Text>
-                <Link
-                    as="a"
-                    textTransform="none"
-                    fontWeight="bold"
-                    color="accent.300"
-                    opacity="1"
-                    target="_blank"
-                    href="https://github.com/akshat46/next_portfolio"
-                    isExternal
-                >
-                    <FiGitBranch /> See it on Github.
-                </Link>
+                {/* <Link */}
+                {/*     as="a" */}
+                {/*     textTransform="none" */}
+                {/*     fontFamily="Playfair Display" */}
+                {/*     color="black" */}
+                {/*     opacity="1" */}
+                {/*     target="_blank" */}
+                {/*     href="https://github.com/akshat46/next_portfolio" */}
+                {/*     isExternal> */}
+                {/*     <Text fontSize="xs">See it on Github.</Text> */}
+                {/* </Link> */}
             </Box>
-        </ThemeProvider>
+        </div>
     );
 }
 
 export default Footer;
-

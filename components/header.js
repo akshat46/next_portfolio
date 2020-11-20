@@ -24,7 +24,7 @@ class Header extends React.Component{
     }
     render(){
         return (
-        <ThemeProvider theme={customTheme}>
+        <div>
                 <Fade top cascade delay="2500" duration="1000">
                 <Box
                 pos="fixed"
@@ -86,7 +86,7 @@ class Header extends React.Component{
                 
             </Box>
             </Fade>
-        </ThemeProvider>
+        </div>
         );
     }
 }
