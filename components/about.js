@@ -1,21 +1,7 @@
 import { ThemeProvider, Text, Heading, Box, Flex } from "@chakra-ui/core";
 import SectionHeading from "./modules/heading-section";
 import Fade from "react-reveal/Fade";
-import customTheme from "./theme";
-import {
-    DiJavascript1,
-    DiSass,
-    DiNodejsSmall,
-    DiReact,
-    DiFirebase,
-    DiAws,
-    DiGoogleCloudPlatform,
-    DiGit,
-    DiLinux,
-    DiAndroid,
-} from "react-icons/di";
-import { AiFillCopyrightCircle, AiOutlineAndroid } from "react-icons/ai";
-import { GiMoonOrbit } from "react-icons/gi";
+import { IoChevronForward } from "react-icons/io5";
 
 const languages = {
     title: "Languages",
@@ -35,26 +21,21 @@ const databases = {
 const About = (props) => (
     <div>
         <SectionHeading>About me</SectionHeading>
-
         <Box
             w={["90%", "500px", "600px", "650px"]}
             boxSizing="border-box"
             p="md"
             m="0 auto"
-            marginBottom={["16", "32"]}
-            textAlign="center">
+            marginBottom={["16", "32"]}>
             <Fade bottom cascade>
                 <div>
                     <Text color="accent.text" lineHeight="1.8" opacity="0">
-                        I recieved a bachelor's degree in software engineering from San Jose State University in 2018,
-                        and I am currently pursuring a master's degree in Software Engineering at SJSU(graduating{" "}
-                        <Text as="mark" backgroundColor="tertiary.400">
-                            December 2020
-                        </Text>
-                        ). I am passionate about software development, and specially interested in Full Stack Web
-                        Development.
+                        I received a bachelor's degree in software engineering from San Jose State University in 2018,
+                        and I am currently pursuring a master's degree in Software Engineering at SJSU (graduating in
+                        December 2020). I have had significant experience in full stack web and native Android
+                        development, and I am also passionate about UI/UX.
                     </Text>
-                    <Text color="accent.text" marginTop={["6", "12"]} opacity="0">
+                    <Text color="accent.text" marginTop={["4", "8"]} opacity="0">
                         Few technologies I have been working with recently:
                     </Text>
                 </div>
@@ -63,65 +44,44 @@ const About = (props) => (
                 <Flex
                     w="100%"
                     h={["200px", "100px"]}
-                    direction="column"
-                    alignContent="space-around"
+                    flexDir="column"
+                    wrap="wrap"
                     color="accent.300"
                     marginTop={["2", "4"]}
                     textAlign="left"
                     fontFamily="Karla"
-                    flexWrap="wrap"
                     pos="relative"
-                    opacity="0"
-                    ml="auto"
-                    mr="auto">
-                    <Box m={["1", "2"]}>
-                        <AiOutlineAndroid /> Android
+                    opacity="0">
+                    <Box mt={["1", "2"]}>
+                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Android
                     </Box>
-                    <Box m={["1", "2"]}>
-                        <DiJavascript1 /> JavaScript
+                    <Box mt={["1", "2"]}>
+                        <IoChevronForward style={{ marginBottom: "-3px" }} /> JavaScript
                     </Box>
-                    <Box m={["1", "2"]}>
-                        <DiNodejsSmall /> Node.js
+                    <Box mt={["1", "2"]}>
+                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Node.js
                     </Box>
-                    <Box m={["1", "2"]}>
-                        <DiReact /> React
+                    <Box mt={["1", "2"]}>
+                        <IoChevronForward style={{ marginBottom: "-3px" }} /> React
                     </Box>
-                    <Box m={["1", "2"]}>
-                        <DiSass /> SCSS
+                    <Box mt={["1", "2"]}>
+                        <IoChevronForward style={{ marginBottom: "-3px" }} /> CSS
                     </Box>
-                    <Box m={["1", "2"]}>
-                        <DiLinux /> Linux
+                    <Box mt={["1", "2"]}>
+                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Linux
                     </Box>
-                    <Box m={["1", "2"]}>
-                        <DiGit /> Git
+                    <Box mt={["1", "2"]}>
+                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Git
                     </Box>
-                    <Box m={["1", "2"]}>
-                        <DiFirebase /> Firebase
+                    <Box mt={["1", "2"]}>
+                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Firebase
                     </Box>
-                    <Box m={["1", "2"]} w={["45%", "auto"]}>
-                        <DiGoogleCloudPlatform /> Google Cloud Platform
-                    </Box>
-                    <Box m={["1", "2"]} w={["45%", "auto"]}>
-                        <DiAws /> Amazon Web Services IoT
+                    <Box mt={["1", "2"]} w={["45%", "auto"]}>
+                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Google Cloud Platform
                     </Box>
                 </Flex>
             </Fade>
         </Box>
-        {/* <Box w={["80%", "500px", "600px", "650px"]}
-            boxSizing="border-box" p="md" m="0 auto"
-            marginBottom={["16", "32"]}
-            textAlign="center">
-            <Text color="accent.text">Other technologies I am familiar with.</Text>
-            <Flex w="100%"
-                direction="column"
-                alignContent="space-around"
-                color="accent.300"
-                textAlign="left"
-                flexWrap="wrap"
-                h="100px">
-                <SkillsList m={["2px", "10px"]} title={languages.title}></SkillsList>
-            </Flex>
-        </Box> */}
     </div>
 );
 

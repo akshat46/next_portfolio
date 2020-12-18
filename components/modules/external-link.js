@@ -8,37 +8,38 @@ const Reset = {
     opacity: "1",
 };
 
-const ExternalLink = (props) => (
-    <Fade left cascade delay={props.delay} duration="600">
-        <Button
-            as="a"
-            pos="relative"
-            target="_blank"
-            variant="outline"
-            float="right"
-            href={props.url}
-            size="sm"
-            fontSize="2xl"
-            border="none"
-            w="50px"
-            onClick={props.onClick}
-            h="50px"
-            p="4"
-            top="0"
-            boxSizing="border-box"
-            color="accent.300"
-            mb="6"
-            bg="primary.300"
-            boxShadow={
-                props.disabled ? "" : props.shadow == "right" ? customTheme.shadows.right : customTheme.shadows.left
-            }
-            borderRadius="50%"
-            opacity="0"
-            transition="all 0.3s ease-in-out"
-            _hover={Reset}>
-            {props.icon}
-        </Button>
-    </Fade>
-);
+const ExternalLink = (props) => {
+    const shadow = props.disabled ? "" : props.shadow == "right" ? customTheme.shadows.right : customTheme.shadows.left;
+
+    return (
+        <Fade left cascade delay={props.delay} duration="600">
+            <Button
+                as="a"
+                pos="relative"
+                target="_blank"
+                variant="outline"
+                href={props.url}
+                size="sm"
+                fontSize="2xl"
+                border="none"
+                borderRadius={["0 15px 15px 0", "0 15px 15px 0", "50%"]}
+                w={["30px", "30px", "50px"]}
+                h={["30px", "30px", "50px"]}
+                onClick={props.onClick}
+                p={["0.30em", "0.30em", "0.55em"]}
+                boxSizing="border-box"
+                boxShadow={["default", "default", shadow]}
+                color="accent.300"
+                mt="6"
+                left={["-20px", "-20px", "0"]}
+                bg="primary.300"
+                opacity="0"
+                transition="all 0.3s ease-in-out"
+                _hover={Reset}>
+                {props.icon}
+            </Button>
+        </Fade>
+    );
+};
 
 export default ExternalLink;

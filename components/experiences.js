@@ -7,7 +7,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/core";
 import Fade from "react-reveal/Fade";
 
 const Experiences = (props) => (
-    <ThemeProvider theme={customTheme}>
+    <>
         <SectionHeading>Work Experience</SectionHeading>
         <Fade bottom duration={1500}>
             <Box
@@ -16,7 +16,7 @@ const Experiences = (props) => (
                 boxSizing="border-box"
                 p="md"
                 m="0 auto"
-                marginBottom={["32", "64"]}
+                marginBottom={["16", "32"]}
                 boxShadow={customTheme.shadows.center}
                 overflow="hidden"
                 border="solid 1px rgba(0,0,0,0.01)"
@@ -142,7 +142,7 @@ const Experiences = (props) => (
                 </Tabs>
             </Box>
         </Fade>
-    </ThemeProvider>
+    </>
 );
 
 export default Experiences;

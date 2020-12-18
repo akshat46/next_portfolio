@@ -18,7 +18,8 @@ import {
 import ExternalLink from "./external-link";
 import customTheme from "../../components/theme";
 import Fade from "react-reveal/Fade";
-import { FiGithub, FiLock } from "react-icons/fi";
+import { IoLogoGithub, IoLockClosed } from "react-icons/io5";
+import { FiExternalLink } from "react-icons/fi";
 
 const ItemProject = (props) => {
     // const [open, setOpen] = React.useState(false)
@@ -42,8 +43,8 @@ const ItemProject = (props) => {
                 w={["100%", "100%", "50%"]}
                 h="300px"
                 backgroundImage={`url('${props.project.image}')`}
-                onClick={onOpen}
-                cursor="pointer"
+                onClick={props.project.image === "/private.svg" ? null : onOpen}
+                cursor={props.project.image === "/private.svg" ? "not-allowed" : "pointer"}
                 backgroundColor="white"
                 backgroundPosition="center"
                 backgroundSize="cover"
@@ -97,12 +98,25 @@ const ItemProject = (props) => {
                             </Text>
                             <Text opacity="0">{props.project.description}</Text>
                             {!props.project.private ? (
-                                <ExternalLink
+                                <Button
+                                    target="_blank"
+                                    as="a"
+                                    pos="relative"
+                                    variant="outline"
                                     float="right"
-                                    shadow="right"
-                                    url={props.project.github}
-                                    icon={[<FiGithub />]}
-                                />
+                                    border="none"
+                                    p="0.55em"
+                                    w="50px"
+                                    h="50px"
+                                    boxSizing="border-box"
+                                    color="accent.300"
+                                    bg="primary.300"
+                                    float="right"
+                                    borderRadius="50%"
+                                    _hover={{ background: "primary.300" }}
+                                    href={props.project.github}>
+                                    <IoLogoGithub />
+                                </Button>
                             ) : (
                                 <Popover isLazy>
                                     <PopoverTrigger>
@@ -113,15 +127,15 @@ const ItemProject = (props) => {
                                             float="right"
                                             size="sm"
                                             border="none"
+                                            p="0.55em"
                                             w="50px"
                                             h="50px"
-                                            p="4"
                                             boxSizing="border-box"
                                             color="accent.300"
                                             bg="primary.300"
                                             borderRadius="50%"
                                             _hover={{ background: "primary.300" }}>
-                                            <FiLock />
+                                            <IoLockClosed />
                                         </Button>
                                     </PopoverTrigger>
                                     <PopoverContent
@@ -134,6 +148,26 @@ const ItemProject = (props) => {
                                     </PopoverContent>
                                 </Popover>
                             )}
+                            <Button
+                                target="_blank"
+                                as="a"
+                                pos="relative"
+                                variant="outline"
+                                float="right"
+                                border="none"
+                                p="0.55em"
+                                w="50px"
+                                h="50px"
+                                boxSizing="border-box"
+                                visibility={props.project.other != null ? "visible" : "hidden"}
+                                color="accent.300"
+                                bg="primary.300"
+                                float="right"
+                                borderRadius="50%"
+                                _hover={{ background: "primary.300" }}
+                                href={props.project.other}>
+                                <FiExternalLink />
+                            </Button>
                         </div>
                     </Fade>
                 </Box>
