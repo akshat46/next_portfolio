@@ -16,6 +16,7 @@ const ExternalLink = (props) => {
             <Button
                 as="a"
                 pos="relative"
+                top="0"
                 target="_blank"
                 variant="outline"
                 href={props.url}
