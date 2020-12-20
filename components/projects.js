@@ -1,5 +1,4 @@
 import {
-    ThemeProvider,
     Flex,
     Modal,
     ModalOverlay,
@@ -7,12 +6,12 @@ import {
     useDisclosure,
     ModalBody,
     ModalHeader,
-    ModalCloseButton,
     Box,
     Button,
     Text,
 } from "@chakra-ui/core";
-import customTheme from "../components/theme";
+import customThemeLight from "./theme";
+import customThemeDark from "./theme-dark";
 import SectionHeading from "./modules/heading-section";
 import ItemProject from "./modules/item-project";
 import ItemProjectExtra from "./modules/item-extra-project";
@@ -28,7 +27,7 @@ var projects = [
         github: "https://github.com/akshat46/boreas",
         other: "https://drive.google.com/file/d/1aw7bde9RUFunkEi6PhOpkJVmyOFW7VZ9/view?usp=sharing",
         description:
-            "An encrypted offline chatting application. Major highlight of my tasks include implementing padded RSA based encryption, event based architecture to fascilitate emitter-listener relation between controllers and views, searching for nearby usersto be messaged using Google's Nearby Connection API, and UI enhancements.",
+            "An encrypted offline chatting application. Highlights of my tasks include implementing padded RSA based encryption, event based architecture to facilitate emitter-listener relation between controllers and views, searching for nearby usersto be messaged using Google's Nearby Connection API, and UI enhancements.",
     },
     {
         title: "FlyingFox",
@@ -44,7 +43,7 @@ var projects = [
         image: "/private.svg",
         private: true,
         description:
-            "Implemented a dashboard with JavaScript that shows live locations, and sensor values of different devices. Implemented a custom event system that updates the locations', and sensor values' UI whenever new ones are recieved from AJAX call.",
+            "Implemented a JavaScript dashboard that shows live locations and sensor values of different devices. Implemented a custom event system that updates the locations' and sensor values' UI whenever new ones are recieved from AJAX call.",
     },
     {
         title: "UniRide",
@@ -90,6 +89,7 @@ const Reset = {
 };
 
 const Projects = (props) => {
+    const customTheme = props.theme === "light" ? customThemeLight : customThemeDark;
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <Box w={["90%", "80%"]} h="auto" position="relative" margin=" 0 auto" marginBottom={["12", "24"]}>
@@ -125,14 +125,15 @@ const Projects = (props) => {
                 color="accent.300"
                 transform="translateY(0px)"
                 transition="transform 0.3s ease-in-out"
+                _focus={{ border: "none" }}
                 _hover={Reset}>
                 <IoFileTrayFull style={{ marginBottom: "-3px" }} /> More Projects
             </Button>
-            <Modal isOpen={isOpen} onClose={onClose} isCentered>
+            <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
                 <ModalOverlay />
                 <ModalContent boxShadow="0" maxW={["80%", "60%"]} bg="primary.300">
                     <ModalHeader w="90%" maxW="800px" m="0 auto">
-                        <Text fontSize="md" fontWeight="normal" fontFamily="Karla">
+                        <Text fontSize="xl" fontWeight="bold" fontFamily="Karla" a color="accent.300">
                             <IoFileTrayFull style={{ marginBottom: "-3px" }} /> Additional Projects
                         </Text>
                     </ModalHeader>

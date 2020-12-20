@@ -1,11 +1,9 @@
-import { ThemeProvider, Text } from "@chakra-ui/core";
-import customTheme from "../theme";
+import { Text } from "@chakra-ui/core";
 
 const Highlight = (props) => (
-    <Text as="mark" backgroundColor="tertiary.400" color={props.textColor ? props.textColor : "accent.text"}>
+    <Text as="mark" borderRadius="sm" px="1" backgroundColor="accent.300" color="primary.200">
         {props.children}
     </Text>
 );
 
 export default Highlight;
-

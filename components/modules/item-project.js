@@ -45,7 +45,7 @@ const ItemProject = (props) => {
                 backgroundImage={`url('${props.project.image}')`}
                 onClick={props.project.image === "/private.svg" ? null : onOpen}
                 cursor={props.project.image === "/private.svg" ? "not-allowed" : "pointer"}
-                backgroundColor="white"
+                backgroundColor="primary.200"
                 backgroundPosition="center"
                 backgroundSize="cover"
                 backgroundRepeat="no-repeat"
@@ -113,6 +113,7 @@ const ItemProject = (props) => {
                                     bg="primary.300"
                                     float="right"
                                     borderRadius="50%"
+                                    _focus={{ border: "none" }}
                                     _hover={{ background: "primary.300" }}
                                     href={props.project.github}>
                                     <IoLogoGithub />
@@ -121,7 +122,7 @@ const ItemProject = (props) => {
                                 <Popover isLazy>
                                     <PopoverTrigger>
                                         <Button
-                                            as="a"
+                                            cursor="pointer"
                                             pos="relative"
                                             variant="outline"
                                             float="right"
@@ -134,6 +135,7 @@ const ItemProject = (props) => {
                                             color="accent.300"
                                             bg="primary.300"
                                             borderRadius="50%"
+                                            _focus={{ border: "none" }}
                                             _hover={{ background: "primary.300" }}>
                                             <IoLockClosed />
                                         </Button>

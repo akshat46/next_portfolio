@@ -1,22 +1,7 @@
-import { ThemeProvider, Text, Heading, Box, Flex } from "@chakra-ui/core";
+import { Text, Box, Flex } from "@chakra-ui/core";
 import SectionHeading from "./modules/heading-section";
 import Fade from "react-reveal/Fade";
 import { IoChevronForward } from "react-icons/io5";
-
-const languages = {
-    title: "Languages",
-    items: ["Java", "Python", "Ruby", "Bash", "Lua"],
-};
-
-const frameworks = {
-    title: "frameworks",
-    items: ["Python Django", "Ruby on Rails", "Native Android"],
-};
-
-const databases = {
-    title: "Databases",
-    items: ["MySQL"],
-};
 
 const About = (props) => (
     <div>

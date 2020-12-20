@@ -1,5 +1,6 @@
-import { ThemeProvider, Box, Button } from "@chakra-ui/core";
-import customTheme from "../components/theme";
+import { Box } from "@chakra-ui/core";
+import customThemeLight from "./theme";
+import customThemeDark from "./theme-dark";
 import Fade from "react-reveal/Fade";
 import HeaderLink from "./modules/header-link";
 import { RiHome5Fill } from "react-icons/ri";
@@ -11,6 +12,9 @@ class Header extends React.Component {
         isActive: false,
         menuHeight: "30px",
     };
+    constructor(props) {
+        super(props);
+    }
     toggleButton = () => {
         this.setState({
             isActive: !this.state.isActive,
@@ -22,6 +26,7 @@ class Header extends React.Component {
         }
     };
     render() {
+        const customTheme = this.props.theme === "light" ? customThemeLight : customThemeDark;
         return (
             <div>
                 <Fade top cascade delay="2500" duration="1000">
@@ -90,4 +95,3 @@ class Header extends React.Component {
 }
 
 export default Header;
-

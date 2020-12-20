@@ -20,25 +20,27 @@ const customTheme = extendTheme({
 
     colors: {
         accent: {
-            200: "#464D75",
-            300: "#464D75",
-            400: "#071252",
-            text: "#1c234a",
+            200: "#466386",
+            300: "#3F5978",
+            400: "#384F6B",
+            text: "#223042",
         },
         primary: {
-            200: "#FFFFFF",
+            invert: "#192330",
+            200: "#f4f4f4",
             300: "#F0F0F0",
-            400: "#f4f4f4",
+            400: "#FFFFFF",
         },
         tertiary: {
-            400: "#1bfaad",
+            400: "#5996BB",
         },
     },
     shadows: {
-        left: "4px -6px 6px rgba(255, 255, 255, 0.6), -10px 4px 20px rgba(0, 0, 0, 0.15)",
-        right: "-4px -6px 6px rgba(255, 255, 255, 0.6), 10px 4px 20px rgba(0, 0, 0, 0.15)",
-        center: "0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15)",
+        left: "4px -6px 6px rgba(255, 255, 255, 0.4), -10px 4px 20px rgba(0, 0, 0, 0.1)",
+        right: "-4px -6px 6px rgba(255, 255, 255, 0.4), 10px 4px 20px rgba(0, 0, 0, 0.1)",
+        center: "0px -6px 12px rgba(255, 255, 255, 0.8), 0px 4px 20px rgba(0, 0, 0, 0.1)",
         default: "0 4px 18px -9px rgba(0,0,0,0.4)",
+        invert: "4px -6px 6px #22304233, -10px 4px 20px #151d287F",
     },
 });
 
