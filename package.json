@@ -20,12 +20,10 @@
         "react": "^16.13.1",
         "react-animated-burgers": "^1.2.8",
         "react-dom": "^16.13.1",
-        "react-headspace": "^0.1.0",
         "react-icons": "^4.1.0",
         "react-pdf": "^4.2.0",
         "react-reveal": "^1.2.2",
         "react-scroll": "^1.8.1",
-        "react-spinners-kit": "^1.9.1",
         "styled-components": "^4.4.1",
         "typeface-playfair-display": "0.0.72"
     }

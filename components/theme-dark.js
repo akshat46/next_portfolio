@@ -1,7 +1,7 @@
 import { extendTheme } from "@chakra-ui/core";
 
 const customTheme = extendTheme({
-    background: "url('/bg-dark.png')",
+    background: "url('/bg-dark.jpg')",
     fonts: {
         body: "Karla, sans-serif",
         heading: "Playfair Display",
@@ -38,7 +38,7 @@ const customTheme = extendTheme({
         left: "4px -6px 6px #22304266, -10px 4px 20px rgba(0, 0, 0, 0.2)",
         right: "-4px -6px 6px #22304266, 10px 4px 20px rgba(0, 0, 0, 0.2)",
         center: "0px -6px 12px #223042CC, 0px 4px 15px rgba(0, 0, 0, 0.2)",
-        default: "0 4px 18px -9px rgba(0,0,0,1)",
+        default: "0 4px 24px -12px #151d28",
         invert: "4px -6px 6px rgba(255, 255, 255, 0.2), -10px 4px 20px rgba(0, 0, 0, 1)",
     },
 });

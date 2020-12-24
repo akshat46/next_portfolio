@@ -103,7 +103,7 @@ const Projects = (props) => {
                 textAlign={["center", "left"]}
                 flexWrap="wrap">
                 {projects.map((value, index) => {
-                    return <ItemProject project={value} />;
+                    return <ItemProject project={value} shadow={customTheme.shadows.default} />;
                 })}
             </Flex>
             <Button

@@ -66,7 +66,7 @@ const Home = (props) => {
                         backgroundPosition="center"
                         backgroundSize="cover"
                         backgroundRepeat="no-repeat"
-                        opacity="0.8"
+                        opacity={props.theme === "light" ? "0.8" : "0.4"}
                         style={blur}
                         visibility={["hidden", "visible"]}
                     />
@@ -84,7 +84,9 @@ const Home = (props) => {
                         backgroundPosition="center"
                         backgroundSize="cover"
                         backgroundRepeat="no-repeat"
-                        boxShadow={props.theme === "light" ? "0px 4px 23px rgba(0, 0, 0, 0.15)" : ""}>
+                        boxShadow={
+                            props.theme === "light" ? "0px 4px 23px rgba(0, 0, 0, 0.15)" : customTheme.shadows.default
+                        }>
                         <Text pos="absolute" color="accent.400" right="15px" bottom="0" opacity="0.3" fontSize="xs">
                             Photo by{" "}
                             <Link

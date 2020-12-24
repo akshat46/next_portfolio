@@ -140,10 +140,7 @@ const ItemProject = (props) => {
                                             <IoLockClosed />
                                         </Button>
                                     </PopoverTrigger>
-                                    <PopoverContent
-                                        border="0"
-                                        boxShadow="0 4px 18px -9px rgba(0,0,0,0.3)"
-                                        _focus={{ border: "0" }}>
+                                    <PopoverContent border="0" boxShadow={props.shadow} _focus={{ border: "0" }}>
                                         <PopoverBody>
                                             Private Repository. Developed as part of professional work.
                                         </PopoverBody>

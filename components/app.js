@@ -9,7 +9,7 @@ import Footer from "./footer";
 import customThemeLight from "./theme";
 import customThemeDark from "./theme-dark";
 import * as Scroll from "react-scroll";
-import { IoMoon } from "react-icons/io5";
+import { IoMoon, IoSunny } from "react-icons/io5";
 
 let Element = Scroll.Element;
 
@@ -42,6 +42,7 @@ function App() {
                 <Links theme={colorMode} />
                 <Footer />
             </>
+            {/* <Loader theme={colorMode} /> */}
             <Button
                 _hover={Reset}
                 _focus={{ border: "none" }}
@@ -61,7 +62,7 @@ function App() {
                 bg="none"
                 transition="all 0.3s ease-in-out"
                 onClick={toggleColorMode}>
-                <IoMoon />
+                {colorMode === "light" ? <IoMoon /> : <IoSunny />}
             </Button>
         </ThemeProvider>
     );

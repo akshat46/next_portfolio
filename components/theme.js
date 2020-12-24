@@ -39,7 +39,7 @@ const customTheme = extendTheme({
         left: "4px -6px 6px rgba(255, 255, 255, 0.4), -10px 4px 20px rgba(0, 0, 0, 0.1)",
         right: "-4px -6px 6px rgba(255, 255, 255, 0.4), 10px 4px 20px rgba(0, 0, 0, 0.1)",
         center: "0px -6px 12px rgba(255, 255, 255, 0.8), 0px 4px 20px rgba(0, 0, 0, 0.1)",
-        default: "0 4px 18px -9px rgba(0,0,0,0.4)",
+        default: "0 8px 24px -12px rgba(0,0,0,0.2)",
         invert: "4px -6px 6px #22304233, -10px 4px 20px #151d287F",
     },
 });

@@ -35,6 +35,7 @@ const Experiences = (props) => {
                                 marginBottom="0"
                                 marginBottom="-2px"
                                 fontWeight="bold"
+                                cursor="pointer"
                                 _hover={{ bg: "primary.300" }}
                                 _selected={{
                                     opacity: "1",
@@ -49,6 +50,7 @@ const Experiences = (props) => {
                                 color="accent.300"
                                 opacity="0.5"
                                 border="0"
+                                cursor="pointer"
                                 marginBottom="0"
                                 marginBottom="-2px"
                                 fontWeight="bold"
