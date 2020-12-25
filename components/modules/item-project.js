@@ -51,8 +51,17 @@ const ItemProject = (props) => {
                 backgroundRepeat="no-repeat"
                 borderRadius="lg"
                 overflow="hidden"
-                m="0"
-            />
+                m="0">
+                <Box
+                    boxSize="100%"
+                    left="0"
+                    top="0"
+                    bg="primary.300"
+                    opacity="0.4"
+                    transition="all 0.2s ease-in-out"
+                    _hover={{ opacity: "0" }}
+                />
+            </Box>
             <Modal isOpen={isOpen} onClose={onClose} isCentered>
                 <ModalOverlay />
                 <ModalContent

@@ -40,7 +40,6 @@ const Experiences = (props) => {
                                 _selected={{
                                     opacity: "1",
                                     color: "accent.400",
-                                    bg: "primary.400",
                                 }}
                                 _focus={{ border: "0px" }}>
                                 01
@@ -55,7 +54,7 @@ const Experiences = (props) => {
                                 marginBottom="-2px"
                                 fontWeight="bold"
                                 _hover={{ bg: "primary.300" }}
-                                _selected={{ opacity: "1", color: "accent.400", bg: "primary.400" }}
+                                _selected={{ opacity: "1", color: "accent.400" }}
                                 _focus={{ border: "0px" }}>
                                 02
                             </Tab>

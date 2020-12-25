@@ -25,7 +25,14 @@ const ItemProjectExtra = (props) => {
     // const [open, setOpen] = React.useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
-        <Box m="0 auto" mb="10" w="90%" maxW="800px" color="accent.text" textAlign="left" bg="primary.300">
+        <Box
+            m="0 auto"
+            mb={["4", "6", "10"]}
+            w="90%"
+            maxW={["100%", "90%", "800px"]}
+            color="accent.text"
+            textAlign="left"
+            bg="primary.300">
             <Fade bottom cascade>
                 <div>
                     <Text
@@ -110,7 +117,9 @@ const ItemProjectExtra = (props) => {
                     <Text opacity="0" color="accent.300" fontSize="sm">
                         {props.project.technologies}
                     </Text>
-                    <Text opacity="0">{props.project.description}</Text>
+                    <Text opacity="0" m="0">
+                        {props.project.description}
+                    </Text>
                 </div>
             </Fade>
         </Box>

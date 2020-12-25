@@ -103,7 +103,7 @@ const Projects = (props) => {
                 textAlign={["center", "left"]}
                 flexWrap="wrap">
                 {projects.map((value, index) => {
-                    return <ItemProject project={value} shadow={customTheme.shadows.default} />;
+                    return <ItemProject project={value} shadow={customTheme.shadows.default} theme={props.theme} />;
                 })}
             </Flex>
             <Button
@@ -131,8 +131,8 @@ const Projects = (props) => {
             </Button>
             <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
                 <ModalOverlay />
-                <ModalContent boxShadow="0" maxW={["80%", "60%"]} bg="primary.300">
-                    <ModalHeader w="90%" maxW="800px" m="0 auto">
+                <ModalContent boxShadow="0" maxW={["100%", "80%", "60%"]} bg="primary.300">
+                    <ModalHeader w={["100%", "90%", "800px"]} m="0 auto">
                         <Text fontSize="xl" fontWeight="bold" fontFamily="Karla" a color="accent.300">
                             <IoFileTrayFull style={{ marginBottom: "-3px" }} /> Additional Projects
                         </Text>
