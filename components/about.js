@@ -3,6 +3,18 @@ import SectionHeading from "./modules/heading-section";
 import Fade from "react-reveal/Fade";
 import { IoChevronForward } from "react-icons/io5";
 
+const skills = [
+    "Java",
+    "JavaScript",
+    "JQuery",
+    "OpenTracing",
+    "Tailwind CSS",
+    "React",
+    "Node.js",
+    "Git",
+    "Linux",
+];
+
 const About = (props) => (
     <div>
         <SectionHeading>About me</SectionHeading>
@@ -15,10 +27,10 @@ const About = (props) => (
             <Fade bottom cascade>
                 <div>
                     <Text color="accent.text" lineHeight="1.8" opacity="0">
-                        I received a bachelor's degree in software engineering from San Jose State University in 2018,
-                        and I am currently pursuring a master's degree in Software Engineering at SJSU (graduating in
-                        December 2020). I have had significant experience in full stack web and native Android
-                        development, and I am also passionate about UI/UX.
+                        I received a bachelor's degree in software engineering from San Jose State
+                        University in 2018, and a master's degree in Software Engineering from SJSU
+                        in December 2020. I have had significant experience in full stack web and
+                        native Android development, and I am also passionate about UI/UX.
                     </Text>
                     <Text color="accent.text" marginTop={["4", "8"]} opacity="0">
                         Few technologies I have been working with recently:
@@ -37,33 +49,11 @@ const About = (props) => (
                     fontFamily="Karla"
                     pos="relative"
                     opacity="0">
-                    <Box mt={["1", "2"]}>
-                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Android
-                    </Box>
-                    <Box mt={["1", "2"]}>
-                        <IoChevronForward style={{ marginBottom: "-3px" }} /> JavaScript
-                    </Box>
-                    <Box mt={["1", "2"]}>
-                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Node.js
-                    </Box>
-                    <Box mt={["1", "2"]}>
-                        <IoChevronForward style={{ marginBottom: "-3px" }} /> React
-                    </Box>
-                    <Box mt={["1", "2"]}>
-                        <IoChevronForward style={{ marginBottom: "-3px" }} /> CSS
-                    </Box>
-                    <Box mt={["1", "2"]}>
-                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Linux
-                    </Box>
-                    <Box mt={["1", "2"]}>
-                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Git
-                    </Box>
-                    <Box mt={["1", "2"]}>
-                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Firebase
-                    </Box>
-                    <Box mt={["1", "2"]} w={["45%", "auto"]}>
-                        <IoChevronForward style={{ marginBottom: "-3px" }} /> Google Cloud Platform
-                    </Box>
+                    {skills.map((skill) => (
+                        <Box mt={["1", "2"]}>
+                            <IoChevronForward style={{ marginBottom: "-3px" }} /> {skill}
+                        </Box>
+                    ))}
                 </Flex>
             </Fade>
         </Box>

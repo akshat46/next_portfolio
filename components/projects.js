@@ -32,19 +32,19 @@ var projects = [
     {
         title: "FlyingFox",
         technologies: "CSS, Firefox",
-        image: "/flyingfox.gif",
+        image: "/flyingfox.png",
         private: false,
         github: "https://github.com/akshat46/flyingfox",
         description: "A Firefox redesign and a passion project.",
     },
-    {
-        title: "IoT Dashboard",
-        technologies: "Node.js, Express.js, jQuery, Google Maps API, Firebase, AWS, GCP",
-        image: "/private.svg",
-        private: true,
-        description:
-            "Implemented a JavaScript dashboard that shows live locations and sensor values of different devices. Implemented a custom event system that updates the locations' and sensor values' UI whenever new ones are recieved from AJAX call.",
-    },
+    // {
+    //     title: "IoT Dashboard",
+    //     technologies: "Node.js, Express.js, jQuery, Google Maps API, Firebase, AWS, GCP",
+    //     image: "/private.svg",
+    //     private: true,
+    //     description:
+    //         "Implemented a JavaScript dashboard that shows live locations and sensor values of different devices. Implemented a custom event system that updates the locations' and sensor values' UI whenever new ones are recieved from AJAX call.",
+    // },
     {
         title: "UniRide",
         technologies: "Native Android, Java, Gradle, XML",
@@ -62,7 +62,8 @@ const extra_projects = [
         title: "Perpetual Zen",
         technologies: "Ubuntu18.04, AwesomeWM, Lua",
         github: "https://github.com/akshat46/perpetual-zen",
-        description: "A workspace theme for Awesome Window Manager with various toggleable components.",
+        description:
+            "A workspace theme for Awesome Window Manager with various toggleable components.",
     },
     {
         title: "Ryu Dashboard",
@@ -92,7 +93,12 @@ const Projects = (props) => {
     const customTheme = props.theme === "light" ? customThemeLight : customThemeDark;
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
-        <Box w={["90%", "80%"]} h="auto" position="relative" margin=" 0 auto" marginBottom={["12", "24"]}>
+        <Box
+            w={["90%", "80%"]}
+            h="auto"
+            position="relative"
+            margin=" 0 auto"
+            marginBottom={["12", "24"]}>
             <SectionHeading>Projects</SectionHeading>
             <Flex
                 w="100%"
@@ -103,7 +109,13 @@ const Projects = (props) => {
                 textAlign={["center", "left"]}
                 flexWrap="wrap">
                 {projects.map((value, index) => {
-                    return <ItemProject project={value} shadow={customTheme.shadows.default} theme={props.theme} />;
+                    return (
+                        <ItemProject
+                            project={value}
+                            shadow={customTheme.shadows.default}
+                            theme={props.theme}
+                        />
+                    );
                 })}
             </Flex>
             <Button
@@ -133,7 +145,12 @@ const Projects = (props) => {
                 <ModalOverlay />
                 <ModalContent boxShadow="0" maxW={["100%", "80%", "60%"]} bg="primary.300">
                     <ModalHeader w={["100%", "90%", "800px"]} m="0 auto">
-                        <Text fontSize="xl" fontWeight="bold" fontFamily="Karla" a color="accent.300">
+                        <Text
+                            fontSize="xl"
+                            fontWeight="bold"
+                            fontFamily="Karla"
+                            a
+                            color="accent.300">
                             <IoFileTrayFull style={{ marginBottom: "-3px" }} /> Additional Projects
                         </Text>
                     </ModalHeader>

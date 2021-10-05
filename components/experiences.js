@@ -58,11 +58,81 @@ const Experiences = (props) => {
                                 _focus={{ border: "0px" }}>
                                 02
                             </Tab>
+                            <Tab
+                                bg="primary.300"
+                                color="accent.300"
+                                opacity="0.5"
+                                border="0"
+                                marginBottom="0"
+                                marginBottom="-2px"
+                                fontWeight="bold"
+                                cursor="pointer"
+                                _hover={{ bg: "primary.300" }}
+                                _selected={{
+                                    opacity: "1",
+                                    color: "accent.400",
+                                }}
+                                _focus={{ border: "0px" }}>
+                                03
+                            </Tab>
                         </TabList>
 
                         <TabPanels>
                             <TabPanel bg="primary.300" p={["4", "8"]} boxSizing="border-box">
-                                <Text fontSize="xl" m="0" mb="2" color="accent.300" fontFamily="Playfair Display">
+                                <Text
+                                    fontSize="xl"
+                                    m="0"
+                                    mb="2"
+                                    color="accent.300"
+                                    fontFamily="Playfair Display">
+                                    Contract Web Developer
+                                </Text>
+                                <Text fontSize="sm" m="0" mb="2" color="accent.300">
+                                    at Foldscope Instruments
+                                </Text>
+                                <Text fontSize="sm" m="0" mb="4" color="accent.300">
+                                    May 2021 - Aug 2021
+                                </Text>
+                                <List m="0" p="0" color="accent.text" lineHeight="1.8">
+                                    <ListItem>
+                                        <Text>
+                                            <ListIcon as={FiChevronRight} color="accent.300" />
+                                            Built a <Highlight>React dashboard</Highlight> that can
+                                            be used to program a laser based projection device with{" "}
+                                            <Highlight>Blockly</Highlight> and{" "}
+                                            <Highlight>P5</Highlight>.
+                                        </Text>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Text>
+                                            <ListIcon as={FiChevronRight} color="accent.300" />
+                                            <Highlight>
+                                                Designed a lower level language
+                                            </Highlight>{" "}
+                                            for the projector, and implemented a{" "}
+                                            <Highlight>JavaScript</Highlight> based engine that
+                                            converts <Highlight>HTML Canvas</Highlight> to the
+                                            projector language.
+                                        </Text>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Text>
+                                            <ListIcon as={FiChevronRight} color="accent.300" />
+                                            Implemented a map based dashboard using{" "}
+                                            <Highlight>Next.js</Highlight> and Ant Design UI library
+                                            for <Highlight>React</Highlight> to display realtime
+                                            values from Firebase.
+                                        </Text>
+                                    </ListItem>
+                                </List>
+                            </TabPanel>
+                            <TabPanel bg="primary.300" p={["4", "8"]} boxSizing="border-box">
+                                <Text
+                                    fontSize="xl"
+                                    m="0"
+                                    mb="2"
+                                    color="accent.300"
+                                    fontFamily="Playfair Display">
                                     Full Stack Developer
                                 </Text>
                                 <Text fontSize="sm" m="0" mb="2" color="accent.300">
@@ -75,39 +145,50 @@ const Experiences = (props) => {
                                     <ListItem>
                                         <Text>
                                             <ListIcon as={FiChevronRight} color="accent.300" />
-                                            Implemented a <Highlight display="inline">Node.js service</Highlight> that
-                                            gathers live data from IoT devices using AWS IoT and GCP Pub/Sub, pushes it
-                                            to Firebase database, and makes it available for frontend through{" "}
+                                            Implemented a{" "}
+                                            <Highlight display="inline">
+                                                Node.js service
+                                            </Highlight>{" "}
+                                            that gathers live data from IoT devices using AWS IoT
+                                            and GCP Pub/Sub, pushes it to Firebase database, and
+                                            makes it available for frontend through{" "}
                                             <Highlight>Express.js REST API</Highlight>.
                                         </Text>
                                     </ListItem>
                                     <ListItem>
                                         <Text>
                                             <ListIcon as={FiChevronRight} color="accent.300" />
-                                            Designed and implemented a socket based(<Highlight>socket.io</Highlight>)
-                                            architecture to facilitate constant data streams for instant updates between
-                                            frontend and backend.{" "}
+                                            Designed and implemented a socket based(
+                                            <Highlight>socket.io</Highlight>) architecture to
+                                            facilitate constant data streams for instant updates
+                                            between frontend and backend.{" "}
                                         </Text>
                                     </ListItem>
                                     <ListItem>
                                         <Text>
                                             <ListIcon as={FiChevronRight} color="accent.300" />
-                                            Implemented a map based dashboard using <Highlight>Next.js</Highlight> and
-                                            Ant Design UI library for <Highlight>React</Highlight> to display realtime
+                                            Implemented a map based dashboard using{" "}
+                                            <Highlight>Next.js</Highlight> and Ant Design UI library
+                                            for <Highlight>React</Highlight> to display realtime
                                             values from Firebase.
                                         </Text>
                                     </ListItem>
                                     <ListItem>
                                         <Text>
                                             <ListIcon as={FiChevronRight} color="accent.300" />
-                                            Hosted the IoT Node.js service , and a dashboard web app on GCP Compute
-                                            Engine.
+                                            Hosted the IoT Node.js service , and a dashboard web app
+                                            on GCP Compute Engine.
                                         </Text>
                                     </ListItem>
                                 </List>
                             </TabPanel>
                             <TabPanel bg="primary.300" p={["4", "8"]} boxSizing="border-box">
-                                <Text fontSize="xl" m="0" mb="2" color="accent.300" fontFamily="Playfair Display">
+                                <Text
+                                    fontSize="xl"
+                                    m="0"
+                                    mb="2"
+                                    color="accent.300"
+                                    fontFamily="Playfair Display">
                                     Research Assistant
                                 </Text>
                                 <Text fontSize="sm" m="0" mb="2" color="accent.300">
@@ -120,33 +201,35 @@ const Experiences = (props) => {
                                     <ListItem>
                                         <Text>
                                             <ListIcon as={FiChevronRight} color="accent.300" />
-                                            Developed a web dashboard with <Highlight>
-                                                Node.js and Express.js
-                                            </Highlight>{" "}
-                                            for backend, Firebase as database, and{" "}
-                                            <Highlight>jQuery, EJS and SASS</Highlight> for frontend implementation.
+                                            Developed a web dashboard with{" "}
+                                            <Highlight>Node.js and Express.js</Highlight> for
+                                            backend, Firebase as database, and{" "}
+                                            <Highlight>jQuery, EJS and SASS</Highlight> for frontend
+                                            implementation.
                                         </Text>
                                     </ListItem>
                                     <ListItem>
                                         <Text>
                                             <ListIcon as={FiChevronRight} color="accent.300" />
-                                            Visualized live locations of different entities on a map based on values in
-                                            Firebase using constant <Highlight>AJAX</Highlight> calls to Node.js REST
-                                            API, and Google MAPS API.
+                                            Visualized live locations of different entities on a map
+                                            based on values in Firebase using constant{" "}
+                                            <Highlight>AJAX</Highlight> calls to Node.js REST API,
+                                            and Google MAPS API.
                                         </Text>
                                     </ListItem>
                                     <ListItem>
                                         <Text>
                                             <ListIcon as={FiChevronRight} color="accent.300" />
-                                            Implemented a Node.js service that generates random coordinates, and other
-                                            values for certain entities and pushes them to Firebase.
+                                            Implemented a Node.js service that generates random
+                                            coordinates, and other values for certain entities and
+                                            pushes them to Firebase.
                                         </Text>
                                     </ListItem>
                                     <ListItem>
                                         <Text>
                                             <ListIcon as={FiChevronRight} color="accent.300" />
-                                            Enhanced existing <Highlight>Android</Highlight> app UI. Worked with Java
-                                            and XML.
+                                            Enhanced existing <Highlight>Android</Highlight> app UI.
+                                            Worked with Java and XML.
                                         </Text>
                                     </ListItem>
                                 </List>
