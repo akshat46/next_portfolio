@@ -75,9 +75,62 @@ const Experiences = (props) => {
                                 _focus={{ border: "0px" }}>
                                 03
                             </Tab>
+                            <Tab
+                                bg="primary.300"
+                                color="accent.300"
+                                opacity="0.5"
+                                border="0"
+                                marginBottom="0"
+                                marginBottom="-2px"
+                                fontWeight="bold"
+                                cursor="pointer"
+                                _hover={{ bg: "primary.300" }}
+                                _selected={{
+                                    opacity: "1",
+                                    color: "accent.400",
+                                }}
+                                _focus={{ border: "0px" }}>
+                                04
+                            </Tab>
                         </TabList>
 
                         <TabPanels>
+                            <TabPanel bg="primary.300" p={["4", "8"]} boxSizing="border-box">
+                                <Text
+                                    fontSize="xl"
+                                    m="0"
+                                    mb="2"
+                                    color="accent.300"
+                                    fontFamily="Playfair Display">
+                                    Software Developer
+                                </Text>
+                                <Text fontSize="sm" m="0" mb="2" color="accent.300">
+                                    at Sun-Net, Inc.
+                                </Text>
+                                <Text fontSize="sm" m="0" mb="4" color="accent.300">
+                                    Aug 2021 - Present
+                                </Text>
+                                <List m="0" p="0" color="accent.text" lineHeight="1.8">
+                                    <ListItem>
+                                        <Text>
+                                            <ListIcon as={FiChevronRight} color="accent.300" />
+                                            Bug fixing, and implementing enhancements in legacy
+                                            projects developed with stack:{" "}
+                                            <Highlight>
+                                                Tomcat, Spring, Apache Struts, JSP, JQuery, and
+                                                Bootstrap.
+                                            </Highlight>
+                                        </Text>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Text>
+                                            <ListIcon as={FiChevronRight} color="accent.300" />
+                                            Integrating <Highlight>JaegerTracing</Highlight> in
+                                            existing Java microservices.
+                                        </Text>
+                                    </ListItem>
+                                </List>
+                            </TabPanel>
                             <TabPanel bg="primary.300" p={["4", "8"]} boxSizing="border-box">
                                 <Text
                                     fontSize="xl"
