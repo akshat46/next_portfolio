@@ -14,7 +14,7 @@
     "dependencies": {
         "@chakra-ui/core": "next",
         "@merc/react-timeline": "^0.1.42",
-        "framer-motion": "latest",
+        "framer-motion": "3.10.6",
         "next": "^10.0.1",
         "next-fonts": "^0.17.0",
         "react": "^16.13.1",
