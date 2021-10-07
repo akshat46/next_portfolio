@@ -97,6 +97,14 @@ const Experiences = (props) => {
                                     <ListItem>
                                         <Text>
                                             <ListIcon as={FiChevronRight} color="accent.300" />
+                                            Worked closely with a team to convert non-technical
+                                            requirements and guidelines into software under short
+                                            timelines for a seminar.
+                                        </Text>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Text>
+                                            <ListIcon as={FiChevronRight} color="accent.300" />
                                             Built a <Highlight>React dashboard</Highlight> that can
                                             be used to program a laser based projection device with{" "}
                                             <Highlight>Blockly</Highlight> and{" "}
@@ -113,15 +121,6 @@ const Experiences = (props) => {
                                             <Highlight>JavaScript</Highlight> based engine that
                                             converts <Highlight>HTML Canvas</Highlight> to the
                                             projector language.
-                                        </Text>
-                                    </ListItem>
-                                    <ListItem>
-                                        <Text>
-                                            <ListIcon as={FiChevronRight} color="accent.300" />
-                                            Implemented a map based dashboard using{" "}
-                                            <Highlight>Next.js</Highlight> and Ant Design UI library
-                                            for <Highlight>React</Highlight> to display realtime
-                                            values from Firebase.
                                         </Text>
                                     </ListItem>
                                 </List>
